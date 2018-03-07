@@ -1,0 +1,28 @@
+.container .top-bar {
+    background-color: #BCBACA;
+    width: 80%;
+    float: right;
+}
+
+.container .search-container {
+    margin-left: 5rem;
+    width: 30%;
+    padding: 0.5rem 0;
+    background-color: white;
+    border: 0;
+    outline: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container .search-container input{
+    margin: 1rem;
+    width: 80%;
+    background-color: white;
+    border: 0;
+    outline: 0;
+    margin: 0;
+    margin-left: 0.4rem;
+    font-size: 1.4rem;
+    padding: 0.1rem 1rem;
+}

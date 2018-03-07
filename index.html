@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <title>hua audio player</title>
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/player.css">
+        <link rel="stylesheet" href="css/topBar.css">
+        <link rel="stylesheet" href="css/library.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="http://at.alicdn.com/t/font_571177_hk0002u9jvtv5cdi.css">
+    </head>
+    <body>
+        <div class='side'>
+            <i class='iconfont icon-yinyue'></i>
+            <h1>HUA PLAYER</h1>
+            <ul>
+                <li>Songs</li>
+                <li>Artist</li>
+                <li>Liked</li>
+                <li>LocalFiles</li>
+            </ul>
+        </div>
+        <div class='container'>
+            <div class='top-bar'>
+                <div class='search-container'>
+                    <input class='search-bar' placeholder="Type to search...">
+                    <i class='iconfont icon-sousuo' style="margin:0;"></i>
+                </div>
+            </div>
+            <div class='music-library'>
+                <div class='albums-header'>
+                    <h2>Recommended Albums</h2>
+                </div>
+                <ul class='Albums'></ul>
+                <h2>Recently Issued</h2>
+                <div class='issued table'>
+                </div>
+                <!-- <h2 class='top-list'>Top List</h2> -->
+            </div>
+        </div>
+        <div class='player'  ondragstart="return false">
+            <div class='buttons'>
+                <i class="iconfont icon-ai18 previous-song change"></i>
+                <i class="iconfont icon-zanting play"></i>
+                <i class="iconfont icon-ai19 next-song change"></i>
+            </div>
+            <img class='cover'>
+            <div class='player-control'>
+                <div class='music-message'>
+                    <span class='song'></span>
+                    <span class='singer'></span>
+                </div>
+                <div class='duration-container'>
+                    <span class='currenttime'>00:00</span>
+                    <span class='durationTime'>00:00</span>
+                </div>
+                <div class="slider-cont" style='width: 500px;'>
+                    <div class='processor'  data-active='unfinished' style="width: 0px;"></div>
+                    <span class="timeshow none" style=''>00:00</span>
+                </div>
+            <audio id='id-audio-player' controls="controls" data-active=0 data-songs=3></audio>
+        </div>
+        <div class='volume-container'>
+            <i class='iconfont icon-yinliang'></i>
+            <div class='volume'>
+                <span class='processor-vol'style="width:0px"></span>
+                <span class='processor-value'></span>
+            </div>
+        </div>
+    </body>
+        <script src='js/main.js'></script>
+</html>

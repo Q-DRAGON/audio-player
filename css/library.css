@@ -1,0 +1,80 @@
+.container .music-library {
+    margin-left: 24%;
+}
+
+.music-library h2 {
+    font-size: 1.8rem;
+    display: inline-block;
+    font-family: "Microsoft Yahei";
+}
+
+.music-library .arrow {
+    display: inline-block;
+}
+
+.Albums {
+    padding: 0;
+}
+
+.Albums li{
+    display: inline-block;
+    padding: 0rem 0rem;
+    width: calc((100% - 4%) / 5);
+    cursor: pointer;
+}
+
+.Albums li:hover {
+    animation: pulse linear 1s;
+}
+
+.table {
+    width: 62%;
+}
+
+.Albums li img {
+    width: 14rem;
+    height: 14rem;
+}
+
+.Albums li .title {
+    font-weight: bold;
+}
+
+.Albums li .artist {
+    font-weight: lighter;
+}
+
+.table-cell {
+    padding-bottom: 2rem;
+    cursor: pointer;
+}
+
+.table-cell:hover {
+    animation: pulse linear 1s;
+    cursor: pointer;
+}
+
+.table-cell img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.table-cell div {
+    display: inline-block;
+    padding: 0.5rem;
+    vertical-align: top;
+}
+
+.table-cell .title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-bottom: 0.6rem;
+}
+
+.table-cell .artist {
+    font-weight: lighter;
+}
+
+.table-cell div span {
+    display: block;
+}

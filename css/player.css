@@ -1,0 +1,135 @@
+.player {
+    position: fixed;
+    background-color: #565567;
+    background-color:rgba(0,0,0,0.7);
+    height: 7rem;
+    width: 100%;
+    bottom: 0;
+}
+
+.player .cover {
+    width: 6rem;
+    height: 6rem;
+    padding: 0.6rem;
+}
+
+.buttons {
+    float: left;
+    width: 20%;
+    height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.buttons i{
+    font-size: 6rem;
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+}
+
+.buttons .play{
+    margin: 0 1rem;
+    position: relative;
+    top: 8.5%;
+}
+
+.buttons .play:hover{
+    animation: flipOutY linear 2s;
+}
+
+.buttons .change{
+    font-size: 4rem;
+    margin: 0;
+}
+
+.player-control {
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    width: 40%;
+    line-height: 3rem;
+    padding-left: 1rem;
+}
+
+.music-message {
+    display: inline-block;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.music-message .song {
+    font-size: 1.5rem;
+}
+
+.music-message .singer {
+    font-weight: lighter;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+.duration-container {
+    display: inline-block;
+    position: absolute;
+    right: 3.4rem;
+    color: white;
+}
+
+.slider-cont {
+    background-color: rgba(162,158,163,0.3);
+    height: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.processor {
+    height: 100%;
+    border-radius: 6px;
+    bottom: 0px;
+    background-image: linear-gradient(to right, rgba(84, 255, 159, 0.6), rgba(188, 186, 202, 0.6));
+    display: block;
+    position: absolute;
+}
+
+
+.processor-vol {
+    height: 100%;
+    border-radius: 6px;
+    bottom: 0px;
+    background-image: linear-gradient(to right, rgba(84, 255, 159, 0.6), rgba(188, 186, 202, 0.6));
+    display: block;
+}
+
+
+.volume-container {
+    float: right;
+    height: 100%;
+    width: calc(100% - 78%);
+}
+
+.volume-container i{
+    color: white;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.volume {
+    display: inline-block;
+    height: 5px;
+    width: 50%;
+    background-color: rgba(162,158,163,0.3);
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    top: -0.4rem;
+}
+
+.timeshow {
+    color: white;
+    position: relative;
+    bottom: 3.5rem;
+}
