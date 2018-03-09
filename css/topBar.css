@@ -1,5 +1,5 @@
 .container .top-bar {
-    background-color: #BCBACA;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     width: 80%;
     float: right;
 }
@@ -22,7 +22,7 @@
     border: 0;
     outline: 0;
     margin: 0;
-    margin-left: 0.4rem;
+    margin-left: 1.4rem;
     font-size: 1.4rem;
     padding: 0.1rem 1rem;
 }

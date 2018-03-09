@@ -2,8 +2,18 @@
     font-family: "IF";
     src: url("../src/font/思源黑体/NotoSansHans-DemiLight.otf")
 }
+
 body {
     font-family: "IF","PingFang SC", "Microsoft Yahei";
+}
+
+.container {
+    height: 100vh;
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+}
+
+img {
+    box-shadow:5px 5px 10px 0 rgba(0,0,0,.2);
 }
 
 #id-audio-player {
@@ -36,7 +46,7 @@ i {
     height: 100%;
     width: 20%;
     overflow: hidden;
-    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
 .side ul {

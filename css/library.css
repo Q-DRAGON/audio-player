@@ -1,5 +1,18 @@
+@keyframes DIYpulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  to {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
+
 .container .music-library {
     margin-left: 24%;
+    text-shadow:5px 5px 10px rgba(0,0,0,.2);
+
 }
 
 .music-library h2 {
@@ -14,6 +27,7 @@
 
 .Albums {
     padding: 0;
+    margin-bottom: 42px;
 }
 
 .Albums li{
@@ -24,7 +38,8 @@
 }
 
 .Albums li:hover {
-    animation: pulse linear 1s;
+    animation: DIYpulse linear 0.3s;
+    animation-fill-mode: forwards;
 }
 
 .table {
@@ -34,6 +49,8 @@
 .Albums li img {
     width: 14rem;
     height: 14rem;
+    margin-bottom: 5px;
+
 }
 
 .Albums li .title {
@@ -50,7 +67,8 @@
 }
 
 .table-cell:hover {
-    animation: pulse linear 1s;
+    animation: DIYpulse linear 0.3s;
+    animation-fill-mode: forwards;
     cursor: pointer;
 }
 

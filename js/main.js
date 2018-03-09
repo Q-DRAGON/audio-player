@@ -15,7 +15,193 @@ var player = function() {
     this.albums = document.querySelector('.Albums')
     this.issued = document.querySelector('.issued')
     this.issuedhtml = []
-    this.music = []
+    this.albumsArr = [
+        {
+            song: '等你下课',
+            artist: '周杰伦',
+            src: 'src/music/周杰伦-等你下课.mp3',
+            cover: 'src/music/周杰伦-等你下课.jpg'
+        },
+        {
+            song: 'JULY',
+            artist: '吴亦凡',
+            src: 'src/music/吴亦凡-JULY.mp3',
+            cover: 'src/music/吴亦凡-JULY.jpg'
+        },
+        {
+            song: '你好',
+            artist: '初音ミク',
+            src: 'src/music/初音ミク - 你好.mp3',
+            cover: 'src/music/初音ミク - 你好.jpg'
+        },
+        {
+            song: '伟大的渺小',
+            artist: '林俊杰',
+            src: 'src/music/林俊杰-伟大的渺小.mp3',
+            cover: 'src/music/林俊杰-伟大的渺小.jpg'
+        },
+        {
+            song: 'Shape of You',
+            artist: 'Ed Sheeran',
+            src: 'src/music/Ed Sheeran-Shape of You.mp3',
+            cover: 'src/music/Ed Sheeran-Shape of You.jpg'
+        },
+    ]
+    this.issuedArr = [
+        {
+            song: 'Refrain(TV size)',
+            artist: 'Aimer',
+            src: 'src/music/Aimer - Refrain (TV size).mp3',
+            cover: 'src/music/Aimer - Refrain (TV size).jpg'
+        },
+        {
+            song: 'Superstar',
+            artist: 'Beatrich',
+            src: 'src/music/Beatrich-Superstar.mp3',
+            cover: 'src/music/Beatrich-Superstar.jpg'
+        },
+        {
+            song: 'Something Just Like This',
+            artist: 'Chainsmokers Coldplay',
+            src: 'src/music/Chainsmokers Coldplay-Something Just Like This.mp3',
+            cover: 'src/music/Chainsmokers Coldplay-Something Just Like This.jpg'
+        },
+        {
+            song: 'Panama',
+            artist: 'Matteo',
+            src: 'src/music/Matteo-Panama.mp3',
+            cover: 'src/music/Matteo-Panama.jpg'
+        },
+        {
+            song: '大一岁',
+            artist: 'Tizzy T',
+            src: 'src/music/Tizzy T-大一岁.mp3',
+            cover: 'src/music/Tizzy T-大一岁.jpg'
+        },
+        {
+            song: 'Hand in Hand',
+            artist: '初音ミク',
+            src: 'src/music/初音ミク-Hand in Hand.mp3',
+            cover: 'src/music/初音ミク-Hand in Hand.jpg'
+        },
+        {
+            song: 'ODDS&ENDS  メルト',
+            artist: '初音ミク',
+            src: 'src/music/初音ミク-ODDS&ENDS.mp3',
+            cover: 'src/music/初音ミク-ODDS&ENDS.jpg'
+        },
+        {
+            song: '告白气球',
+            artist: '周杰伦',
+            src: 'src/music/周杰伦-告白气球.mp3',
+            cover: 'src/music/周杰伦-告白气球.jpg'
+        },
+        {
+            song: '6',
+            artist: '吴亦凡',
+            src: 'src/music/吴亦凡-6.mp3',
+            cover: 'src/music/吴亦凡-6.jpg'
+        },
+        {
+            song: '她说',
+            artist: '林俊杰',
+            src: 'src/music/林俊杰-她说.mp3',
+            cover: 'src/music/林俊杰-她说.jpg'
+        },
+    ]
+    this.allArr = [
+        {
+            song: '等你下课',
+            artist: '周杰伦',
+            src: 'src/music/周杰伦-等你下课.mp3',
+            cover: 'src/music/周杰伦-等你下课.jpg'
+        },
+        {
+            song: 'JULY',
+            artist: '吴亦凡',
+            src: 'src/music/吴亦凡-JULY.mp3',
+            cover: 'src/music/吴亦凡-JULY.jpg'
+        },
+        {
+            song: '你好',
+            artist: '初音ミク',
+            src: 'src/music/初音ミク - 你好.mp3',
+            cover: 'src/music/初音ミク - 你好.jpg'
+        },
+        {
+            song: '伟大的渺小',
+            artist: '林俊杰',
+            src: 'src/music/林俊杰-伟大的渺小.mp3',
+            cover: 'src/music/林俊杰-伟大的渺小.jpg'
+        },
+        {
+            song: 'Shape of You',
+            artist: 'Ed Sheeran',
+            src: 'src/music/Ed Sheeran-Shape of You.mp3',
+            cover: 'src/music/Ed Sheeran-Shape of You.jpg'
+        },
+        {
+            song: 'Refrain(TV size)',
+            artist: 'Aimer',
+            src: 'src/music/Aimer - Refrain (TV size).mp3',
+            cover: 'src/music/Aimer - Refrain (TV size).jpg'
+        },
+        {
+            song: 'Superstar',
+            artist: 'Beatrich',
+            src: 'src/music/Beatrich-Superstar.mp3',
+            cover: 'src/music/Beatrich-Superstar.jpg'
+        },
+        {
+            song: 'Something Just Like This',
+            artist: 'Chainsmokers Coldplay',
+            src: 'src/music/Chainsmokers Coldplay-Something Just Like This.mp3',
+            cover: 'src/music/Chainsmokers Coldplay-Something Just Like This.jpg'
+        },
+        {
+            song: 'Panama',
+            artist: 'Matteo',
+            src: 'src/music/Matteo-Panama.mp3',
+            cover: 'src/music/Matteo-Panama.jpg'
+        },
+        {
+            song: '大一岁',
+            artist: 'Tizzy T',
+            src: 'src/music/Tizzy T-大一岁.mp3',
+            cover: 'src/music/Tizzy T-大一岁.jpg'
+        },
+        {
+            song: 'Hand in Hand',
+            artist: '初音ミク',
+            src: 'src/music/初音ミク-Hand in Hand.mp3',
+            cover: 'src/music/初音ミク-Hand in Hand.jpg'
+        },
+        {
+            song: 'ODDS&ENDS メルト',
+            artist: '初音ミク',
+            src: 'src/music/初音ミク-ODDS&ENDS.mp3',
+            cover: 'src/music/初音ミク-ODDS&ENDS.jpg'
+        },
+        {
+            song: '告白气球',
+            artist: '周杰伦',
+            src: 'src/music/周杰伦-告白气球.mp3',
+            cover: 'src/music/周杰伦-告白气球.jpg'
+        },
+        {
+            song: '6',
+            artist: '吴亦凡',
+            src: 'src/music/吴亦凡-6.mp3',
+            cover: 'src/music/吴亦凡-6.jpg'
+        },
+        {
+            song: '她说',
+            artist: '林俊杰',
+            src: 'src/music/林俊杰-她说.mp3',
+            cover: 'src/music/林俊杰-她说.jpg'
+        },
+    ]
+    this.musicList = []
 }
 
  // 显示音乐时间，换算成显示的数目
@@ -30,21 +216,13 @@ var fill = function(m) {
     return m
 }
 
-// ajax 模板
-var ajax = function(request) {
-    var r = new XMLHttpRequest()
-    r.open(request.method, request.url, true)
-    r.onreadystatechange = function(event) {
-        if(r.readyState === 4) {
-            request.callback(r.response)
-        }
-    }
-    if (request.method === 'GET') {
-        r.send()
-    } else {
-        r.send(request.data)
-    }
+// 从数组里抽取随机下标
+player.prototype.getRandom = function(){
+    var len = this.allArr.length
+    var i = Math.ceil(Math.random() * (len)) % len
+    return this.allArr[i]
 }
+
 
 player.prototype.inspectButton = function() {
     var playbutton = document.querySelector('.play')
@@ -55,40 +233,30 @@ player.prototype.inspectButton = function() {
 }
 
 // albums 模板
-player.prototype.albumstemplate = function(music) {
-    var picture = music.picture
-    var title = music.title
-    var artist = music.artist
+player.prototype.albumstemplate = function(album) {
     var t = `
             <li class='music'>
-                <img src=http://imgsrc.baidu.com/forum/pic/item/4c50c51b9d16fdfaa8237e83b28f8c5495ee7b4b.jpg>
-                <div class='title'>${title}</div>
-                <div class='artist'>${artist}</div>
+                <img src='${album.cover}'>
+                <div class='title'>${album.song}</div>
+                <div class='artist'>${album.artist}</div>
             </li>
             `
     var AlbumDiv = document.querySelector('.Albums')
     AlbumDiv.insertAdjacentHTML('beforeend', t)
-    this.music.push(music)
-    console.log('this.albumsMusic', this.albumsMusic)
 }
 
 // Issued 模板
-player.prototype.issuedtemplate = function(music) {
-        var picture = music.picture
-        var title = music.title
-        var artist = music.artist
+player.prototype.issuedtemplate = function(issued) {
         var t = `
         <div class="table-cell music">
-            <img src=http://img.sj33.cn/uploads/allimg/201508/7-150P4221929.jpg>
+            <img src='${issued.cover}'>
             <div class='music-info'>
-                <span class='title'>${title}</span>
-                <span class='artist'>${artist}</span>
+                <span class='title'>${issued.song}</span>
+                <span class='artist'>${issued.artist}</span>
             </div>
         </div>
         `
     this.issuedhtml.push(t)
-    this.music.push(music)
-    console.log('this.issuedMusic', this.issuedMusic)
     if(this.issuedhtml.length == 3) {
         var issuedhtml = this.issuedhtml.join('')
         var tem = `
@@ -96,80 +264,26 @@ player.prototype.issuedtemplate = function(music) {
             ${issuedhtml}
             </div>
         `
-        console.log('tem', tem)
         var issuedDiv = document.querySelector('.issued')
         issuedDiv.insertAdjacentHTML('beforeend', tem)
         this.issuedhtml = []
     }
 }
 
-// 音乐信息和音源的切换
-player.prototype.musicLayout = function(area, music) {
-    console.log(typeof area)
-    if (area == 'player') {
-        this.audio.src = music.src
-        this.cover.setAttribute('src', 'http://img.sj33.cn/uploads/allimg/201508/7-150P4221947.jpg')
-        this.singer.innerHTML = music.artist
-        this.song.innerHTML = music.title
-        this.audio.play()
-        this.inspectButton()
-    } else if (area == 'Albums') {
-        this.albumstemplate(music)
-    } else if (area == 'issued') {
-        console.log('issued启动', music)
-        this.issuedtemplate(music)
+// albums 音乐区域渲染
+player.prototype.albumsRender = function() {
+    for(let i = 0; i < this.albumsArr.length; i++) {
+        var album = this.albumsArr[i]
+        this.albumstemplate(album)
     }
 }
 
-// 给音乐信息建立对象
-player.prototype.musicObject = function(response) {
-    var music = {
-        src: response.song[0].url,
-        title: response.song[0].title,
-        picture: response.song[0].picture,
-        artist: response.song[0].artist
-    }
-    return music
-}
-
-// 音乐 api 请求
-player.prototype.audioRequest = function(area) {
-    var self = this
-    var request = {
-        method: 'GET',
-        url: 'http://api.jirengu.com/fm/getSong.php',
-        callback: function(response) {
-            // 不考虑错误情况(断网/服务器返回错误等等)
-            var response = JSON.parse(response)
-            console.log('响应', response)
-            // 把音乐信息建立对象
-            var music = self.musicObject(response)
-            // 布局音乐信息
-            self.musicLayout(area, music)
+// issued 音乐区域渲染
+player.prototype.issuedRender = function() {
+        for(let i = 0; i < this.issuedArr.length - 1; i++) {
+            var issued = this.issuedArr[i]
+            this.issuedtemplate(issued)
         }
-    }
-    ajax(request)
-}
-
-// albums 音乐 api 请求
-player.prototype.albumsRequest = function() {
-    for(let i = 0; i < 5; i++) {
-        this.audioRequest('Albums')
-    }
-}
-
-// issued 音乐 api 请求
-player.prototype.issuedRequest = function() {
-    for(let j = 0; j < 3; j++) {
-        for(let i = 0; i < 3; i++) {
-            this.audioRequest('issued')
-        }
-    }
-}
-
-// 播放音乐 api 请求
-player.prototype.playerRequest = function() {
-    this.audioRequest('player')
 }
 
 // 切歌时寻找对象的下标时
@@ -179,27 +293,25 @@ player.prototype.index = function(o) {
     var activeIndex = parseInt(songs.dataset.active)
     var nextIndex = (activeIndex + numberOfSongs + o) % numberOfSongs
     songs.dataset.active = nextIndex
-    console.log(songs.dataset.active)
     return nextIndex
 }
 
 // 点播歌曲
 player.prototype.mod = function(target) {
-    console.log('mod', target)
     if (target.classList.contains('music')) {
-        console.log('if')
         var title = target.querySelector('.title').innerText
-        console.log('iftitle', target.querySelector('.title'), title)
     } else {
-        console.log('else')
         var title = target.parentElement.querySelector('.title').innerText
-        console.log('elsetitle', target.parentElement.querySelector('.title'), title)
     }
-    for(let i = 0; i < this.music.length; i++) {
-        console.log('forxp,', title)
-        if(title == this.music[i].title) {
-            var music = this.music[i]
-            this.musicLayout('player', music)
+    for(let i = 0; i < this.allArr.length; i++) {
+        if(title == this.allArr[i].song) {
+            this.cover.setAttribute('src', this.allArr[i].cover)
+            this.audio.src = this.allArr[i].src
+            this.song.innerText = this.allArr[i].song
+            this.singer.innerText = this.allArr[i].artist
+            this.audio.play()
+            this.inspectButton()
+            this.saveMusicRecords(this.allArr[i])
             break
         }
     }
@@ -211,7 +323,6 @@ player.prototype.playIt = function(target) {
         if (target.classList.contains('icon-bofang')) {
             target.classList.remove('icon-bofang')
             target.classList.add('icon-zanting')
-            console.log('this', self.audio)
             self.audio.play()
         } else {
             target.classList.remove('icon-zanting')
@@ -220,32 +331,65 @@ player.prototype.playIt = function(target) {
         }
 }
 
+
+player.prototype.saveMusicRecords = function(music) {
+    if(this.musicList.length > 0) {
+        for(let i = 0; i < this.musicList.length; i++) {
+            if(this.musicList[i].song == music.song){
+                return false
+            }
+        }
+        this.musicList.push(music)
+    } else {
+        this.musicList.push(music)
+    }
+}
+
+
+player.prototype.musicIndex = function(song) {
+    for(let i = 0; i < this.musicList.length; i++) {
+        if(this.musicList[i].song == song){
+            return i
+            break
+        }
+    }
+}
+
 // 上一首
 player.prototype.previous = function(target) {
-    console.log('previous-song')
-    var playbutton = document.querySelector('.play')
     // 获取歌曲的暂停键
-    this.playerRequest()
+    var index = this.musicIndex(this.song.innerText)
+    if(index - 1 > -1) {
+        this.audio.src = this.musicList[index - 1].src
+        this.cover.setAttribute('src', this.musicList[index - 1].cover)
+        this.singer.innerHTML = this.musicList[index - 1].artist
+        this.song.innerHTML = this.musicList[index - 1].song
+        this.audio.play()
+        this.inspectButton()
+    }
 }
 
 // 下一首
 player.prototype.next = function(target) {
-    console.log('next-song')
-    var playbutton = document.querySelector('.play')
     // 获取歌曲的暂停键
-    this.playerRequest()
+    var index = this.musicIndex(this.song.innerText)
+    if(index + 1 < this.musicList.length) {
+        this.audio.src = this.musicList[index + 1].src
+        this.cover.setAttribute('src', this.musicList[index + 1].cover)
+        this.singer.innerHTML = this.musicList[index + 1].artist
+        this.song.innerHTML = this.musicList[index + 1].song
+        this.audio.play()
+        this.inspectButton()
+    }
 }
 
 // 判断按钮是播放，上一首，还是下一首
 player.prototype.button = function(target) {
     if(target.classList.contains('play')){
-        console.log('click 被判断为 play')
         this.playIt(target)
     } else if(target.classList.contains('previous-song')){
-        console.log('click 被判断为 previous')
         this.previous(target)
     } else if(target.classList.contains('next-song')){
-        console.log('click 被判断为 next')
         this.next(target)
     }
 }
@@ -257,7 +401,6 @@ player.prototype.vol = function() {
         self.processorVol.style.width =  event.offsetX + "px"
         self.processorVol.setAttribute('data-active', 'unfinished')
         self.audio.volume = parseInt(self.processorVol.style.width) / self.volume.offsetWidth
-        console.log(self.audio.volume)
         document.addEventListener('mousemove', function(event){
             // if 语句为了避免 chrome的 bug： mouseup 后再次运行 mousemove
             if(self.processorVol.getAttribute('data-active') == 'finish'){
@@ -272,7 +415,6 @@ player.prototype.vol = function() {
                             self.audio.volume = 1
                     } else {
                         self.audio.volume = processorVolWidth / volumeWidth
-                        console.log(self.audio.volume)
                     }
             }
         })
@@ -314,7 +456,6 @@ player.prototype.moveBar = function() {
     var sec = fill(Math.floor(current % 60))
     this.currenttime.innerHTML = `${min}:${sec}`
     if(this.audio.currentTime == this.audio.duration) {
-        console.log('自动切歌')
         this.playerRequest()
     }
 }
@@ -325,7 +466,6 @@ player.prototype.dragBar = function() {
     var contWidth = parseInt(this.cont.style.width)
     var processorWidth = parseInt(this.processor.style.width)
     this.cont.addEventListener('mousedown', function(event){
-        console.log('click')
         self.processor.style.width =  event.offsetX + "px"
         self.processor.setAttribute('data-active', 'unfinished')
         document.addEventListener('mousemove', function(event){
@@ -335,9 +475,7 @@ player.prototype.dragBar = function() {
             } else if(self.processor.getAttribute('data-active') == 'unfinished'){
                    self.processor.style.width = event.offsetX + "px"
                 // 防止拖拽进度条时溢出, 设置最大值为进度条的极限
-                console.log('contWidth', contWidth)
                 if(processorWidth > contWidth) {
-                        console.log('触发超越')
                         self.processor.style.width = contWidth + "px"
                 }
             }
@@ -346,11 +484,8 @@ player.prototype.dragBar = function() {
         document.addEventListener('mouseup', function(event){
             if(self.processor.getAttribute('data-active') == 'unfinished'){
                 self.processor.setAttribute('data-active', 'finish')
-                console.log(self.timeshow.innerHTML)
                 var num = self.timeshow.innerHTML.split(':')
-                console.log('num', num)
                 var seconds = parseInt(num[0]) * 60 + parseInt(num[1])
-                console.log('seconds', seconds)
                 self.audio.currentTime = seconds
             }
         })
@@ -369,30 +504,36 @@ player.prototype.time = function() {
 // 总控制
 player.prototype.initPlayer = function() {
     var self = this
+    // 打开界面初渲染
+    this.albumsRender()
+    this.issuedRender()
     // 进度条悬停提示
     this.timeShow()
     // 进度条拖动
     this.dragBar()
+    // 初始音乐
+    var initMusic = this.getRandom()
+    this.cover.setAttribute('src', initMusic.cover)
+    this.audio.src = initMusic.src
+    this.song.innerText = initMusic.song
+    this.singer.innerText = initMusic.artist
+    this.saveMusicRecords(initMusic)
     // 当三个播放控制按钮其中有被按下,传 target 去判断
     this.buttons.addEventListener('click', function(){
-        console.log('click 被点击')
         self.button(event.target)
     })
     // 当 albums 区域有事件,传 target 去判断
     this.albums.addEventListener('click', function(){
         if(!event.target.classList.contains('Albums')) {
-            console.log('albums click 被点击', event.target)
             self.mod(event.target)
         }
     })
     // 当 issued 区域有事件,传 target 去判断
     this.issued.addEventListener('click', function(){
-        console.log('issued click 被点击', event.target)
         self.mod(event.target)
     })
     // 音量条
     this.volume.addEventListener('mouseover', function(){
-        console.log('音量条等待触发', self, self.volume)
         self.vol()
     })
     // 进度条移动
@@ -403,10 +544,6 @@ player.prototype.initPlayer = function() {
     this.audio.addEventListener('canplay', function(){
         self.time()
     })
-    // 打开界面初请求
-    this.playerRequest()
-    this.albumsRequest()
-    this.issuedRequest()
 }
 
 
